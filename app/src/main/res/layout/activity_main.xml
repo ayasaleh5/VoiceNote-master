@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootC"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/file_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout28"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <LinearLayout
+        android:id="@+id/linearLayout28"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayout18"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/background"
+            android:gravity="end"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/camera"
+                android:layout_width="27dp"
+                android:layout_height="23dp"
+                android:layout_gravity="start|center"
+                android:layout_marginStart="11dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="13dp"
+                app:srcCompat="@drawable/ic_attach_name" />
+
+            <EditText
+                android:id="@+id/text_send"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="8dp"
+                android:hint="Type something..."
+                android:layout_marginEnd="7dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:ems="10"
+                android:autofillHints="" />
+        </LinearLayout>
+        <com.devlomi.record_view.RecordView
+            android:id="@+id/record_view"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:slide_to_cancel_arrow="@drawable/recv_ic_arrow"
+            app:slide_to_cancel_arrow_color="#000000"
+            app:slide_to_cancel_bounds="8dp"
+            app:slide_to_cancel_margin_right="10dp"
+            app:slide_to_cancel_text="Slide To Cancel"
+            app:counter_time_color="#ff0000"
+            android:visibility="gone"
+            />
+
+        <com.devlomi.record_view.RecordButton
+            android:id="@+id/record_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/recv_bg_mic"
+            android:scaleType="centerInside"
+            app:mic_icon="@drawable/recv_ic_mic_white" />
+        <ImageButton
+            android:id="@+id/sendMsgIB"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:padding="10dp"
+            android:src="@drawable/ic_send_black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
